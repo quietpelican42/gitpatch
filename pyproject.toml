@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gitpatch"
+version = "0.1.0"
+description = "Pure-Python parser for git diff, format-patch and show output, including renames, copies, mode changes and binary patches."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "__AUTHOR__"}]
+keywords = ["git", "patch", "diff", "parser", "format-patch"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "mypy>=1.10"]
+
+[project.urls]
+Repository = "https://github.com/__GH_OWNER__/gitpatch"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+gitpatch = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+strict = true
+files = ["src", "tests", "tools"]
+
+[[tool.mypy.overrides]]
+module = ["unidiff", "whatthepatch", "patch_ng", "diff_parser", "pygit2"]
+ignore_missing_imports = true
