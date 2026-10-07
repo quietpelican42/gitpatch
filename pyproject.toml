@@ -9,7 +9,7 @@ description = "Pure-Python parser for git diff, format-patch and show output, in
 readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "MIT"}
-authors = [{name = "__AUTHOR__"}]
+authors = [{name = "kofiadeyemiq"}]
 keywords = ["git", "patch", "diff", "parser", "format-patch"]
 classifiers = [
   "Programming Language :: Python :: 3",
@@ -21,7 +21,7 @@ dependencies = []
 dev = ["pytest>=8", "mypy>=1.10"]
 
 [project.urls]
-Repository = "https://github.com/__GH_OWNER__/gitpatch"
+Repository = "https://github.com/quietpelican42/gitpatch"
 
 [tool.setuptools.packages.find]
 where = ["src"]
